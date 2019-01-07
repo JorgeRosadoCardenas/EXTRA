@@ -1,0 +1,52 @@
+using namespace std;
+
+#include<iostream>
+#include<conio.h>
+
+int cod, pre, can, total, paga, cam;
+
+main()
+{
+	char op;
+	
+	while(op!='s' && op!='S')
+	{
+		system("cls");
+		cout<<"bienvenido a Abarrotes  TelematiKeichon\n ";
+		cout<<" [A] Desea agregar un producto? [S] salir\n";
+		op=getch();
+		switch(op)
+		{		    
+		    case 'a':case'A':
+		    cout<<"Ingrese el codigo del producto: ";
+    		cin>>cod;
+    		cout<<"Ingrese el precio del producto: ";
+    		cin>>pre;
+    		cout<<"Ingrese la cantidad que desea llevar: ";
+    		cin>>can;
+    		total=pre*can; 
+		    getch();
+		    break;
+		    
+		    case 's':case'S':
+		    cout<<"estas seguro que deseas salir? ([S] para confirmar)\n";
+		    op=getch();
+		    break;
+		    
+		    default:
+		    cout<<"opcion no valida\n";
+		    getch();
+		}
+	}
+	
+	cout<<"¿Con cuanto va a pagar?\n";
+    cin>>paga;
+    cam=paga-total;
+    cout<<"Abarrotes TelematiKeichon\n";
+    cout<<"Codigo-Precio-Cantidad-Total\n";
+    cout<<cod<<"       "<<pre<<"      "<<can<<"        "<<total;
+    cout<<"\n""Total "<<total;
+    cout<<"\n""Pago con "<<paga;
+    cout<<"\n""Cambio= "<<cam;
+   
+}
